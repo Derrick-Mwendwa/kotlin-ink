@@ -21,7 +21,7 @@ This will print the text "Hello, World!" in ASCII art.
 Please note that not all characters are supported. If you try to print a character that is not supported,
 an `IllegalArgumentException` will be thrown.
 
-## Installation
+## Installation (Coming Soon)
 
 To add KInk to your project, you need to include it as a dependency in your build.gradle file:
 

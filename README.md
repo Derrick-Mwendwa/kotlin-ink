@@ -21,17 +21,35 @@ This will print the text "Hello, World!" in ASCII art.
 Please note that not all characters are supported. If you try to print a character that is not supported,
 an `IllegalArgumentException` will be thrown.
 
-## Installation (Coming Soon)
+## Installation
 
-To add KInk to your project, you need to include it as a dependency in your build.gradle file:
+### JitPack
 
-```groovy
-dependencies {
-    implementation 'tech.derrickmwendwa:k-ink:1.0.0'
+[![](https://jitpack.io/v/Derrick-Mwendwa/KotlinInk.svg)](https://jitpack.io/#Derrick-Mwendwa/KotlinInk)
+
+KInk is available on JitPack. You can add it to your project by following the instructions below.
+
+To add KInk to your project, you need to add the JitPack repository to your `build.gradle.kts` file:
+
+```kotlin
+repositories {
+    maven("https://jitpack.io")
 }
 ```
 
-Please replace `1.0.0` with the latest version of KInk.
+Next, add KInk as a dependency:
+
+```kotlin
+dependencies {
+    implementation("com.github.Derrick-Mwendwa:KotlinInk:v1.0.0")
+}
+```
+
+Please replace `v1.0.0` with the latest version of KInk.
+
+### Maven Central
+
+Coming soon...
 
 ## Contributing
 

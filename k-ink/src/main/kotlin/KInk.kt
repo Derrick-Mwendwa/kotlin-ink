@@ -3,6 +3,7 @@ package tech.derrickmwendwa
 import tech.derrickmwendwa.internal.CHARACTER_HEIGHT
 import tech.derrickmwendwa.internal.characters
 import tech.derrickmwendwa.utils.PublicApi
+import tech.derrickmwendwa.utils.safeSubstring
 
 /**
  * KInk is a simple ASCII art library
@@ -16,20 +17,23 @@ class KInk private constructor() {
          */
         @PublicApi
         fun say(text: String) {
-            val charArray = text.toCharArray()
-
             // Check if the character(s) exists
-            charArray.forEach { ch ->
+            text.forEachIndexed { index, ch ->
                 if (characters[ch] == null) {
                     throw IllegalArgumentException(
-                        "Character '$ch' in \"$text\" does not exist in KInk"
+                        "Character '${
+                            text.safeSubstring(
+                                index,
+                                index + 1
+                            )
+                        }' in \"$text\" does not exist in KInk"
                     )
                 }
             }
 
             // Print the character(s)
             for (row in 0 until CHARACTER_HEIGHT) {
-                charArray.forEach { ch ->
+                text.forEach { ch ->
                     print(" ${characters[ch]!!.content[row]}")
                 }
                 println(" ")

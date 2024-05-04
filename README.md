@@ -41,7 +41,7 @@ Next, add KInk as a dependency:
 
 ```kotlin
 dependencies {
-    implementation("com.github.Derrick-Mwendwa:KotlinInk:v1.0.2")
+    implementation("tech.derrickmwendwa:kotlin-ink:1.0.3")
 }
 ```
 

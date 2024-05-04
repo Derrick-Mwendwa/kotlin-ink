@@ -41,11 +41,14 @@ Next, add KInk as a dependency:
 
 ```kotlin
 dependencies {
-    implementation("com.github.Derrick-Mwendwa:KotlinInk:v1.0.0")
+    implementation("com.github.Derrick-Mwendwa:KotlinInk:v1.0.1")
 }
 ```
 
-Please replace `v1.0.0` with the latest version of KInk.
+Please replace `v1.0.1` with the latest version of KInk.
+
+> **Note:** Version `v1.0.0` is not available from JitPack. You can manually include it in your project by downloading the
+> *.jar file from the [releases](https://github.com/Derrick-Mwendwa/KotlinInk/releases/tag/v1.0.0) page.
 
 ### Maven Central
 

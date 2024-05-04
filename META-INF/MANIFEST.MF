@@ -1,3 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: k-ink
-Implementation-Version: 1.0.0

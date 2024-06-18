@@ -1,7 +1,7 @@
 package tech.derrickmwendwa.internal
 
 /**
- * Represents a character in the KInk language
+ * Represents a character in Kotlin Ink
  * @property content The content of the character
  */
 internal data class KInkChar(val content: List<String>) {

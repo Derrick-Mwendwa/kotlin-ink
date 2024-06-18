@@ -1,6 +1,6 @@
 package tech.derrickmwendwa.internal
 
-// All the characters in KInk
+// All the characters in Kotlin Ink
 internal val characters: Map<Char, KInkChar> = mapOf(
     'A' to KInkChar(
         listOf(

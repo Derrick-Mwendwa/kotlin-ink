@@ -1,29 +1,11 @@
-# KInk
+# KInk (Kotlin Ink)
 
-KInk is a simple ASCII art library written in Kotlin. It allows you to print text in ASCII art format.
-
-## Features
-
-- Supports a wide range of ASCII characters.
-- Easy to use with a simple API.
-- Written in Kotlin, making it compatible with Java and other JVM languages.
-
-## Usage
-
-To use KInk, you simply need to call the `say` function with the text you want to print in ASCII art. Here's an example:
-
-```kotlin
-KInk.say("Hello, World!")
-```
-
-This will print the text "Hello, World!" in ASCII art.
-
-Please note that not all characters are supported. If you try to print a character that is not supported,
-an `IllegalArgumentException` will be thrown.
+KInk (Kotlin Ink) is a lightweight Kotlin library for generating ASCII art. It provides a simple API to convert text
+into ASCII art.
 
 ## Installation
 
-### JitPack
+### Jitpack
 
 [![](https://jitpack.io/v/Derrick-Mwendwa/KotlinInk.svg)](https://jitpack.io/#Derrick-Mwendwa/KotlinInk)
 
@@ -41,9 +23,56 @@ Next, add KInk as a dependency:
 
 ```kotlin
 dependencies {
-    implementation("tech.derrickmwendwa:kotlin-ink:1.0.3")
+    implementation("tech.derrickmwendwa:kotlin-ink:1.1.0")
 }
 ```
+
+## Usage
+
+KInk provides several methods to print ASCII art from text. Below are examples demonstrating how to use each method.
+
+### Print ASCII Art to Console
+
+To print text as ASCII art directly to the console, use the `say` method:
+
+```kotlin
+import tech.derrickmwendwa.KInk
+
+fun main() {
+    KInk.say("Hello, World!")
+}
+```
+
+### Print ASCII Art to an OutputStream
+
+You can also direct the ASCII art to any `OutputStream`:
+
+```kotlin
+import tech.derrickmwendwa.KInk
+
+fun main() {
+    KInk.say("Hello, World!", System.out)
+}
+```
+
+### Custom Output Function
+
+For more control over the output, you can provide a custom output function:
+
+```kotlin
+import tech.derrickmwendwa.KInk
+
+fun main() {
+    KInk.say("Hello, World!") { line ->
+        println(line) 
+    }
+}
+```
+
+The lambda function receives line by line ASCII art output, not the entire text.
+
+> [!CAUTION]
+> Please note that not all characters are supported. If you try to print a character that is not supported, an `IllegalArgumentException` will be thrown.
 
 ## Contributing
 

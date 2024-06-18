@@ -7,7 +7,7 @@ into ASCII art.
 
 ### Jitpack
 
-[![](https://jitpack.io/v/Derrick-Mwendwa/KotlinInk.svg)](https://jitpack.io/#Derrick-Mwendwa/KotlinInk)
+[![](https://jitpack.io/v/Derrick-Mwendwa/kotlin-ink.svg)](https://jitpack.io/#Derrick-Mwendwa/kotlin-ink)
 
 KInk is available on JitPack. You can add it to your project by following the instructions below.
 
@@ -23,7 +23,7 @@ Next, add KInk as a dependency:
 
 ```kotlin
 dependencies {
-    implementation("tech.derrickmwendwa:kotlin-ink:1.1.0")
+    implementation("com.github.Derrick-Mwendwa:kotlin-ink:1.1.0")
 }
 ```
 

@@ -77,6 +77,14 @@ The lambda function receives line by line ASCII art output, not the entire text.
 > [!CAUTION]
 > Please note that not all characters are supported. If you try to print a character that is not supported, an `IllegalArgumentException` will be thrown.
 
+## Upcoming Features
+
+- Basic Shapes and Patterns
+- Image to ASCII Art
+- Color Support
+- Performance Optimizations
+- Documentation
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a pull request if you have any improvements or open an issue if

@@ -23,7 +23,7 @@ Next, add KInk as a dependency:
 
 ```kotlin
 dependencies {
-    implementation("com.github.Derrick-Mwendwa:kotlin-ink:1.1.0")
+    implementation("com.github.Derrick-Mwendwa:kotlin-ink:1.1.1")
 }
 ```
 

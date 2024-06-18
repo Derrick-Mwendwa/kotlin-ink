@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> The dependency has changed from `tech.derrickmwendwa:kotlin-ink:version` to `com.github.Derrick-Mwendwa:kotlin-ink:version`. Please update your `build.gradle.kts` file accordingly.
+
 # KInk (Kotlin Ink)
 
 KInk (Kotlin Ink) is a lightweight Kotlin library for generating ASCII art. It provides a simple API to convert text

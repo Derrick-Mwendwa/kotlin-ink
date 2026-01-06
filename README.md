@@ -77,11 +77,74 @@ The lambda function receives line by line ASCII art output, not the entire text.
 > [!CAUTION]
 > Please note that not all characters are supported. If you try to print a character that is not supported, an `IllegalArgumentException` will be thrown.
 
+### Basic Shapes and Patterns
+
+KInk now supports generating basic shapes like rectangles, squares, triangles, circles, and polygons. You can also specify patterns for filling these shapes.
+
+```kotlin
+import tech.derrickmwendwa.KInk
+import tech.derrickmwendwa.patterns.CheckeredPattern
+
+fun main() {
+    // Print a rectangle
+    KInk.printRectangle(10, 5)
+
+    // Print a square with a custom character
+    KInk.printSquare(8, '#')
+
+    // Print a circle
+    KInk.printCircle(5)
+
+    // Print a triangle with a checkered pattern
+    val checkered = CheckeredPattern('X', 'O')
+    KInk.printTriangle(10, checkered)
+
+    // Print a polygon (Pentagon)
+    KInk.printPolygon(5, 7)
+}
+```
+
+### Color Support
+
+KInk allows you to print colorful ASCII art using ANSI escape codes. You can style the entire text or have granular control over each segment.
+
+```kotlin
+import tech.derrickmwendwa.KInk
+import tech.derrickmwendwa.style.AnsiColor
+import tech.derrickmwendwa.style.AnsiBackground
+import tech.derrickmwendwa.style.Style
+import tech.derrickmwendwa.style.TextStyle
+
+fun main() {
+    // Simple colored text
+    KInk.say("Hello", Style(color = AnsiColor.RED))
+
+    // Advanced granular control using DSL
+    KInk.say {
+        // Red text
+        text("Red", Style(color = AnsiColor.RED))
+
+        // Blue text with White background and Bold
+        text("Blue", Style(
+            color = AnsiColor.BLUE,
+            background = AnsiBackground.WHITE,
+            styles = setOf(TextStyle.BOLD)
+        ))
+
+        // Apply style to a specific line (e.g., top line)
+        styleLine(0, Style(color = AnsiColor.YELLOW))
+
+        // Nested styling
+        withStyle(color = AnsiColor.GREEN) {
+            text("Green")
+        }
+    }
+}
+```
+
 ## Upcoming Features
 
-- Basic Shapes and Patterns
 - Image to ASCII Art
-- Color Support
 - Performance Optimizations
 - Documentation
 

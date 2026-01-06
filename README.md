@@ -104,10 +104,47 @@ fun main() {
 }
 ```
 
+### Color Support
+
+KInk allows you to print colorful ASCII art using ANSI escape codes. You can style the entire text or have granular control over each segment.
+
+```kotlin
+import tech.derrickmwendwa.KInk
+import tech.derrickmwendwa.style.AnsiColor
+import tech.derrickmwendwa.style.AnsiBackground
+import tech.derrickmwendwa.style.Style
+import tech.derrickmwendwa.style.TextStyle
+
+fun main() {
+    // Simple colored text
+    KInk.say("Hello", Style(color = AnsiColor.RED))
+
+    // Advanced granular control using DSL
+    KInk.say {
+        // Red text
+        text("Red", Style(color = AnsiColor.RED))
+
+        // Blue text with White background and Bold
+        text("Blue", Style(
+            color = AnsiColor.BLUE,
+            background = AnsiBackground.WHITE,
+            styles = setOf(TextStyle.BOLD)
+        ))
+
+        // Apply style to a specific line (e.g., top line)
+        styleLine(0, Style(color = AnsiColor.YELLOW))
+
+        // Nested styling
+        withStyle(color = AnsiColor.GREEN) {
+            text("Green")
+        }
+    }
+}
+```
+
 ## Upcoming Features
 
 - Image to ASCII Art
-- Color Support
 - Performance Optimizations
 - Documentation
 

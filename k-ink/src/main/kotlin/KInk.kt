@@ -1,11 +1,13 @@
 package tech.derrickmwendwa
 
+import tech.derrickmwendwa.internal.AnsiRenderer
 import tech.derrickmwendwa.internal.CHARACTER_HEIGHT
 import tech.derrickmwendwa.internal.ShapeRasterizer
 import tech.derrickmwendwa.internal.characters
 import tech.derrickmwendwa.patterns.CheckeredPattern
 import tech.derrickmwendwa.patterns.Pattern
 import tech.derrickmwendwa.patterns.SolidPattern
+import tech.derrickmwendwa.style.Style
 import tech.derrickmwendwa.utils.PublicApi
 import tech.derrickmwendwa.utils.safeSubstring
 import java.io.OutputStream
@@ -54,6 +56,36 @@ class KInk private constructor() {
         @PublicApi
         fun say(text: String) {
             say(text) { println(it) }
+        }
+
+        /**
+         * Prints text in ASCII art using a DSL builder
+         * @param block The DSL block to build the ASCII art
+         */
+        @PublicApi
+        fun say(block: KInkContext.() -> Unit) {
+            val context = KInkContext()
+            context.block()
+
+            val segments = context.getSegments()
+
+            // Validate all text segments
+            segments.forEach { validateCharacters(it.first) }
+
+            val lines = AnsiRenderer.render(segments, context.getLineStyles())
+            lines.forEach { println(it) }
+        }
+
+        /**
+         * Prints text in ASCII art with a specific style
+         * @param text The text to print
+         * @param style The style to apply to the text
+         */
+        @PublicApi
+        fun say(text: String, style: Style) {
+            say {
+                text(text, style)
+            }
         }
 
         /**

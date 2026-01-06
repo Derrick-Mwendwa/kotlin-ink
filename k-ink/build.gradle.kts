@@ -11,6 +11,7 @@ repositories {
 }
 
 dependencies {
+    implementation("org.fusesource.jansi:jansi:2.4.1")
     testImplementation(kotlin("test"))
 }
 

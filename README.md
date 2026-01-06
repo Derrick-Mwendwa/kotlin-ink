@@ -77,9 +77,35 @@ The lambda function receives line by line ASCII art output, not the entire text.
 > [!CAUTION]
 > Please note that not all characters are supported. If you try to print a character that is not supported, an `IllegalArgumentException` will be thrown.
 
+### Basic Shapes and Patterns
+
+KInk now supports generating basic shapes like rectangles, squares, triangles, circles, and polygons. You can also specify patterns for filling these shapes.
+
+```kotlin
+import tech.derrickmwendwa.KInk
+import tech.derrickmwendwa.patterns.CheckeredPattern
+
+fun main() {
+    // Print a rectangle
+    KInk.printRectangle(10, 5)
+
+    // Print a square with a custom character
+    KInk.printSquare(8, '#')
+
+    // Print a circle
+    KInk.printCircle(5)
+
+    // Print a triangle with a checkered pattern
+    val checkered = CheckeredPattern('X', 'O')
+    KInk.printTriangle(10, checkered)
+
+    // Print a polygon (Pentagon)
+    KInk.printPolygon(5, 7)
+}
+```
+
 ## Upcoming Features
 
-- Basic Shapes and Patterns
 - Image to ASCII Art
 - Color Support
 - Performance Optimizations

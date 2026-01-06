@@ -83,7 +83,7 @@ KInk now supports generating basic shapes like rectangles, squares, triangles, c
 
 ```kotlin
 import tech.derrickmwendwa.KInk
-import tech.derrickmwendwa.internal.CheckeredPattern
+import tech.derrickmwendwa.patterns.CheckeredPattern
 
 fun main() {
     // Print a rectangle

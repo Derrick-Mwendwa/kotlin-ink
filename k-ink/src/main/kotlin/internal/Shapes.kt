@@ -1,8 +1,7 @@
 package tech.derrickmwendwa.internal
 
 import tech.derrickmwendwa.internal.ASPECT_RATIO
-import tech.derrickmwendwa.internal.Pattern
-import tech.derrickmwendwa.internal.SolidPattern
+import tech.derrickmwendwa.patterns.Pattern
 import tech.derrickmwendwa.internal.buildShapeString
 import kotlin.math.pow
 import kotlin.math.sqrt

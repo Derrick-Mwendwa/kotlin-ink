@@ -1,11 +1,11 @@
 package tech.derrickmwendwa
 
 import tech.derrickmwendwa.internal.CHARACTER_HEIGHT
-import tech.derrickmwendwa.internal.CheckeredPattern
-import tech.derrickmwendwa.internal.Pattern
 import tech.derrickmwendwa.internal.ShapeRasterizer
-import tech.derrickmwendwa.internal.SolidPattern
 import tech.derrickmwendwa.internal.characters
+import tech.derrickmwendwa.patterns.CheckeredPattern
+import tech.derrickmwendwa.patterns.Pattern
+import tech.derrickmwendwa.patterns.SolidPattern
 import tech.derrickmwendwa.utils.PublicApi
 import tech.derrickmwendwa.utils.safeSubstring
 import java.io.OutputStream

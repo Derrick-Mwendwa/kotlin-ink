@@ -2,8 +2,7 @@ package tech.derrickmwendwa
 
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
-import tech.derrickmwendwa.internal.SolidPattern
-import tech.derrickmwendwa.internal.CheckeredPattern
+import tech.derrickmwendwa.patterns.CheckeredPattern
 
 class KInkShapesTest {
 
